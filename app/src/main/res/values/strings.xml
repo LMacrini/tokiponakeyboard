@@ -7,7 +7,7 @@
     <string name ="akesi">akesi</string>
     <string name ="ala">ala</string>
     <string name ="alasa">alasa</string>
-    <string name ="ali">ali</string>
+    <string name ="ale">ale</string>
     <string name ="anpa">anpa</string>
     <string name ="ante">ante</string>
     <string name ="anu">anu</string>
@@ -124,8 +124,8 @@
     <string name ="wile">wile</string>
     <string name="bracket">[</string>
     <string name="dot">.</string>
-    <string name="quote">“</string>
-    <string name="question">\?</string>
+    <string name="quote">「</string>
+    <string name="question">?</string>
     <string name="delete">⌫</string>
     <string name="enter">➤</string>
 </resources>

@@ -444,9 +444,9 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
         updateTextInfo();
         quoteNestingLevel = 0;
         for (int i = beforeCursorText.length() - 1; i >= 0; i--) {
-            if (beforeCursorText.charAt(i) == '“') {
+            if (beforeCursorText.charAt(i) == '「') {
                 quoteNestingLevel += 1;
-            } else if (beforeCursorText.charAt(i) == '”') {
+            } else if (beforeCursorText.charAt(i) == '」') {
                 quoteNestingLevel -= 1;
             }
         }

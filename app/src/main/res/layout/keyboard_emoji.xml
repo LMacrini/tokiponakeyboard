@@ -38,12 +38,12 @@
             android:textAllCaps="false" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/ali"
+            android:id="@+id/ale"
             style="@style/ButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
-            android:text="@string/ali_emoji"
+            android:text="@string/ale_emoji"
             android:textAllCaps="false" />
 
         <androidx.appcompat.widget.AppCompatButton

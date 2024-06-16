@@ -3,8 +3,7 @@
     <string-array name="shortcuts">
         <item>ak</item>		<!-- akesi -->
         <item>al</item>		<!-- alasa -->
-        <item>ae</item>		<!-- ale -->
-        <item>aa</item>		<!-- ali -->
+        <item>aa</item>		<!-- ale -->
         <item>an</item>		<!-- anpa -->
         <item>at</item>		<!-- ante -->
         <item>au</item>		<!-- anu -->
@@ -135,7 +134,7 @@
         <item>toki%</item>
 
         <item>[%</item>
-        <item>“%</item>
+        <item>「%</item>
         <item>.%</item>
         <item>\?%</item>
 
@@ -147,7 +146,6 @@
         <item>akesi</item>
         <item>alasa</item>
         <item>ale</item>
-        <item>ali</item>
         <item>anpa</item>
         <item>ante</item>
         <item>anu</item>
@@ -278,7 +276,7 @@
         <item>toki</item>
 
         <item>[]</item>
-        <item>“</item>
+        <item>「</item>
         <item>.</item>
         <item>\?</item>
 

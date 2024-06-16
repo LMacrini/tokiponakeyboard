@@ -86,7 +86,7 @@ The linja pona 4.2 font uses OpenType features to dynamically compose compound g
 
 Some keys have their own special behaviors:
 
-+ The **“** (open) key will automatically change to a **”** (close). For most applications this is desirable, but in the rare case you might have nested quotes, you can simply long press the **”** (close) to force a **“** (open) to be typed.
++ The **「** (open) key will automatically change to a **」** (close). For most applications this is desirable, but in the rare case you might have nested quotes, you can simply long press the **」** (close) to force a **「** (open) to be typed.
 + Long pressing the **➤** key will open the _"select input method"_ dialog, which allows you to quickly switch to a different keyboard such as Gboard.
 + Long pressing a key essentially acts as a slide onto itself, this is useful in some rare cases. For example: typing _jan-jaki_ requires you to start your slide on _jan_ and to finish on _jan_ to change to the _j_ view where you can find _jaki_.
 

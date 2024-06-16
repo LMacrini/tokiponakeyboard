@@ -110,7 +110,7 @@ public class MyKeyboardEmoji extends MyKeyboardAbstract {
         LayoutInflater.from(context).inflate(R.layout.keyboard_emoji, this, true);
 
         // Set the keys
-        keys[0] = findViewById(R.id.ali);
+        keys[0] = findViewById(R.id.ale);
         keys[1] = findViewById(R.id.en);
         keys[2] = findViewById(R.id.ike);
         keys[3] = findViewById(R.id.jan);
@@ -154,7 +154,7 @@ public class MyKeyboardEmoji extends MyKeyboardAbstract {
         }
 
         // Set the button strings
-        keyValues.put(R.id.ali, "a");
+        keyValues.put(R.id.ale, "a");
         keyValues.put(R.id.en, "e");
         keyValues.put(R.id.ike, "i");
         keyValues.put(R.id.jan, "j");

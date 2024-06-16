@@ -41,13 +41,13 @@
             android:textAllCaps="false" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/ali"
+            android:id="@+id/ale"
             style="@style/ButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
             android:fontFamily="@font/linja_pona_4_2"
-            android:text="@string/ali"
+            android:text="@string/ale"
             android:textAllCaps="false" />
 
         <androidx.appcompat.widget.AppCompatButton

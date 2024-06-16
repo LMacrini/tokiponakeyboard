@@ -40,7 +40,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         LayoutInflater.from(context).inflate(R.layout.keyboard, this, true);
 
         // Set the keys
-        keys[0] = findViewById(R.id.ali);
+        keys[0] = findViewById(R.id.ale);
         keys[1] = findViewById(R.id.en);
         keys[2] = findViewById(R.id.ike);
         keys[3] = findViewById(R.id.jan);
@@ -84,7 +84,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         }
 
         // Set the button strings
-        keyValues.put(R.id.ali, "a");
+        keyValues.put(R.id.ale, "a");
         keyValues.put(R.id.en, "e");
         keyValues.put(R.id.ike, "i");
         keyValues.put(R.id.jan, "j");
@@ -110,7 +110,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
 
         keyValues.put(R.id.bracket, "%[");
         keyValues.put(R.id.dot, "%.");
-        keyValues.put(R.id.quote, "%“");
+        keyValues.put(R.id.quote, "%「");
         keyValues.put(R.id.question, "%?");
         keyValues.put(R.id.enter, "%enter");
 
@@ -128,7 +128,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
 
             // Single key sent
             boolean nothingWritten = false;
-            if (getPreviousCharacter().equals("“") && !getNextCharacter().isEmpty() && !getNextCharacter().equals("”") && !startKey.equals("%“") && !startKey.equals("%delete") && !startKey.equals("%enter")) {
+            if (getPreviousCharacter().equals("「") && !getNextCharacter().isEmpty() && !getNextCharacter().equals("」") && !startKey.equals("%「") && !startKey.equals("%delete") && !startKey.equals("%enter")) {
                 suffix = " ";
             }
             if (startKey.charAt(0) == '%') {
@@ -166,14 +166,14 @@ public class MyKeyboard extends MyKeyboardAbstract {
                             setBracket(true);
                         }
                         break;
-                    case "%“":
+                    case "%「":
                         if (quoteNestingLevel > 0) {
-                            write("”");
+                            write("」");
                             if (!",.:?!\n".contains(getNextCharacter()) && !getNextCharacter().isEmpty()) {
                                 write(" ");
                             }
                         } else {
-                            writeShortcut("“%");
+                            writeShortcut("「%");
                             if (getNextCharacter().equals(" ")) {
                                 inputConnection.deleteSurroundingText(0, 1);
                             }
@@ -247,9 +247,9 @@ public class MyKeyboard extends MyKeyboardAbstract {
                         case "%[":
                             write(",");
                             break;
-                        case "%“":
+                        case "%「":
                             if (quoteNestingLevel > 0) {
-                                writeShortcut("“%");
+                                writeShortcut("「%");
                                 if (getNextCharacter().equals(" ")) {
                                     inputConnection.deleteSurroundingText(0, 1);
                                 }
@@ -325,7 +325,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                 String currentString = Character.toString(beforeCursorText.charAt(i));
                 switch (currentString) {
                     case "\n":
-                    case "“":
+                    case "「":
                         if (i == beforeCursorText.length() - 1) {
                             inputConnection.deleteSurroundingText(1, 0);
                         } else {
@@ -335,7 +335,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                     case " ":
                     case "_":
                     case ",":
-                    case "”":
+                    case "」":
                     case ".":
                     case ":":
                     case "?":
@@ -369,9 +369,9 @@ public class MyKeyboard extends MyKeyboardAbstract {
                 }
             }
 
-            if ("% |“ ".contains(getAdjacentCharacters())) {
+            if ("% |「 ".contains(getAdjacentCharacters())) {
                 inputConnection.deleteSurroundingText(0, 1);
-            } else if (" %|  | ,| ”| .| :| ?| !| \n".contains(getAdjacentCharacters())) {
+            } else if (" %|  | ,| 」| .| :| ?| !| \n".contains(getAdjacentCharacters())) {
                 inputConnection.deleteSurroundingText(1, 0);
             }
         } else {
@@ -459,7 +459,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         String charOnLeft = getPreviousCharacter();
 
         boolean adjust = true;
-        if ("],”.:?!\n".contains(charOnLeft) || " _],”.:?!\n".contains(charOnRight)) {
+        if ("],」.:?!\n".contains(charOnLeft) || " _],」.:?!\n".contains(charOnRight)) {
 
             // Do not adjust cursor position
             adjust = false;
@@ -471,7 +471,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         for (i = beforeCursorText.length() - 1; i >= 0; i--) {
             String currentString = Character.toString(beforeCursorText.charAt(i));
             switch (currentString) {
-                case "“":
+                case "「":
                     if (moveTo == 0) {
                         moveTo = i + 1;
                     }
@@ -506,9 +506,9 @@ public class MyKeyboard extends MyKeyboardAbstract {
         // Ensure the correct quote is on the key
         updateQuoteNestedLevel();
         if (quoteNestingLevel > 0) {
-            ((Button) findViewById(R.id.quote)).setText("”");
+            ((Button) findViewById(R.id.quote)).setText("」");
         } else {
-            ((Button) findViewById(R.id.quote)).setText("“");
+            ((Button) findViewById(R.id.quote)).setText("「");
         }
     }
 
