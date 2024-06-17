@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Rect;
 import android.os.Handler;
+import android.util.Log;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.KeyEvent;
@@ -42,6 +43,7 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
 
     // Word construction
     protected int quoteNestingLevel = 0;
+    protected boolean inBrackets = false;
     protected String currentShortcut = "";
 
     // Text manipulation
@@ -446,6 +448,22 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
     }
 
     public void updateCurrentState() {}
+
+    protected void updateInBrackets() {
+        updateTextInfo();
+        inBrackets = false;
+        for (int i = beforeCursorText.length() - 1; i > 0; i --) {
+            // Log.d("Brackets: ", "" + beforeCursorText.charAt(i - 1) + beforeCursorText.charAt(i));
+            // Log.d("Character: ", "󱦐");
+            // Log.d("Result: ", String.valueOf("󱦐".equals("" + beforeCursorText.charAt(i - 1) + beforeCursorText.charAt(i))));
+            if ("󱦑".equals("" + beforeCursorText.charAt(i - 1) + beforeCursorText.charAt(i))) {
+                break;
+            } else if ("󱦐".equals("" + beforeCursorText.charAt(i - 1) + beforeCursorText.charAt(i))) {
+                inBrackets = true;
+                break;
+            }
+        }
+    }
 
     protected void updateQuoteNestedLevel() {
         updateTextInfo();

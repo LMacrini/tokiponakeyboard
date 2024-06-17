@@ -14,7 +14,7 @@ import androidx.preference.PreferenceManager;
 public class MyKeyboard extends MyKeyboardAbstract {
 
     // Word construction
-    private boolean inBrackets = false;
+    // private boolean inBrackets = false;
     private String compoundFirstWordShortcut = "";
     private String suffix = "";
 
@@ -122,6 +122,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         words = res.getStringArray(R.array.words);
         characters = res.getString(R.string.characters);
         unofficialWords = res.getStringArray(R.array.unofficial_words);
+        inBrackets = false;
     }
 
     protected void action(String startKey, String endKey) {
@@ -144,16 +145,18 @@ public class MyKeyboard extends MyKeyboardAbstract {
                 switch (startKey) {
                     case "%]":
 
-                        // Move cursor to the next space (or the end of the input if none are found)
-                        int endBracketLocation = getEndBracketLocation();
-                        inputConnection.setSelection(endBracketLocation, endBracketLocation);
+                        // // Move cursor to the next space (or the end of the input if none are found)
+                        // int endBracketLocation = getEndBracketLocation();
+                        // inputConnection.setSelection(endBracketLocation, endBracketLocation);
 
-                        // Place a closing bracket if it is missing
-                        if (currentText.charAt(endBracketLocation - 1) != ']') {
-                            write("]");
-                        }
+                        // // Place a closing bracket if it is missing
+                        // if (currentText.charAt(endBracketLocation - 1) != ']') {
+                        //     write("]");
+                        // }
 
-                        setBracket(false);
+                        // setBracket(false);
+                        // break;
+                        writeShortcut("]%");
                         break;
                     case "%[":
                         if (inBrackets) {
@@ -164,7 +167,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                             // Move cursor inside brackets
                             // moveCursorBack();
 
-                            setBracket(true);
+                            // setBracket(true);
                         }
                         break;
                     case "%「":
@@ -424,7 +427,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         updateTextInfo();
         int endBracket = beforeCursorText.length() - 1;
         while (true) {
-            if (currentText.charAt(endBracket) == ']' || endBracket == currentText.length() - 1) {
+            if ("" + currentText.charAt(endBracket - 1) + currentText.charAt(endBracket) == "󱦑" || endBracket == currentText.length() - 2) {
 
                 // A bracket was found or the end of the input was reached
                 return endBracket + 1;
@@ -527,7 +530,13 @@ public class MyKeyboard extends MyKeyboardAbstract {
         }
 
         // Ensure the correct quote is on the key
+        updateInBrackets();
         updateQuoteNestedLevel();
+        if (inBrackets) {
+            ((Button) findViewById(R.id.bracket)).setText("󱦑");
+        } else {
+            ((Button) findViewById(R.id.bracket)).setText("󱦐");
+        }
         if (quoteNestingLevel > 0) {
             ((Button) findViewById(R.id.quote)).setText("」");
         } else {
@@ -550,20 +559,21 @@ public class MyKeyboard extends MyKeyboardAbstract {
         }
 
         // Decide the correct word spacer to put before the word
-        String wordSpacer = "";
-        if (cursorAtStart()) {
-            wordSpacer = "";
-        } else if (inBrackets) {
-            wordSpacer = "_";
-        }
+        // String wordSpacer = "";
+        // if (cursorAtStart()) {
+        //     wordSpacer = "";
+        // } else if (inBrackets) {
+        //     wordSpacer = "";
+        // }
 
         // Prepare first part of a compound glyph if it exists
         String compoundFirstWord = "";
         if (!compoundFirstWordShortcut.isEmpty()) {
-            compoundFirstWord = getWord(compoundFirstWordShortcut) + "-";
+            compoundFirstWord = getWord(compoundFirstWordShortcut) + "󱦖";
             compoundFirstWordShortcut = "";
         }
 
-        write(wordSpacer + compoundFirstWord + getWord(shortcut));
+        // write(wordSpacer + compoundFirstWord + getWord(shortcut));
+        write(compoundFirstWord + getWord(shortcut));
     }
 }
