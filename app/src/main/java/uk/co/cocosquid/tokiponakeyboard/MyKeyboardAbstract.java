@@ -295,9 +295,15 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
         setColours();
     }
 
-    protected void moveCursorBackOne() {
+    protected void moveCursorBack() {
         updateTextInfo();
         int backOne = beforeCursorText.length() - 1;
+        inputConnection.setSelection(backOne, backOne);
+    }
+
+    protected void moveCursorBack(int n) {
+        updateTextInfo();
+        int backOne = beforeCursorText.length() - n;
         inputConnection.setSelection(backOne, backOne);
     }
 

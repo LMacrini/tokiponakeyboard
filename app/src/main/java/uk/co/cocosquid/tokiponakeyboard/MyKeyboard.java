@@ -161,7 +161,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                             writeShortcut("[%");
 
                             // Move cursor inside brackets
-                            moveCursorBackOne();
+                            moveCursorBack();
 
                             setBracket(true);
                         }
@@ -230,7 +230,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                 }
             }
             if (!suffix.isEmpty() && !nothingWritten) {
-                moveCursorBackOne();
+                moveCursorBack();
                 suffix = "";
             }
         } else {
