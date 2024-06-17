@@ -32,7 +32,8 @@ Toki Pona Keyboard is an android application that adds an input method specifica
 
 ## How I made it
 
-This keyboard was built using the [standard android libraries](https://developer.android.com/). It types plain text and therefore it can be used anywhere to type in toki pona. The keys themselves also contain simple text but are styled into hieroglyphics with the [linja pona 4.2](http://musilili.net/linja-pona/) font. This font is also active on some of the screenshots, but the way the words are rendered is completely dependent on the app that the text is on.
+This keyboard was built using the [standard android libraries](https://developer.android.com/). It types plain text and therefore it can be used anywhere to type in toki pona. The keys themselves also contain simple text but are styled into hieroglyphics with the [nasin nanpa 4.1](https://github.com/ETBCOR/nasin-nanpa) font.
+<!-- This font is also active on some of the screenshots, but the way the words are rendered is completely dependent on the app that the text is on. -->
 
 
 <a name="the-layout"/>
@@ -75,7 +76,7 @@ Basic rules of the layout:
 
 ### Compound glyphs
 
-The linja pona 4.2 font uses OpenType features to dynamically compose compound glyphs. This means that you can create compound glyphs from any two words. To create a compound glyph you simply need to slide from one glyph to the next:
+The nasin nanpa font uses OpenType features to dynamically compose compound glyphs. This means that you can create compound glyphs from any two words. To create a compound glyph you simply need to slide from one glyph to the next:
 
  ![](other/images/compound-glyphs.gif)
 
