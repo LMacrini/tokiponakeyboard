@@ -67,7 +67,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         keys[22] = findViewById(R.id.bracket);
         keys[23] = findViewById(R.id.quote);
         keys[24] = findViewById(R.id.dot);
-        keys[25] = findViewById(R.id.question);
+        keys[25] = findViewById(R.id.colon);
         keys[26] = findViewById(R.id.enter);
         keys[27] = findViewById(R.id.delete);
 
@@ -111,7 +111,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         keyValues.put(R.id.bracket, "%[");
         keyValues.put(R.id.dot, "%.");
         keyValues.put(R.id.quote, "%「");
-        keyValues.put(R.id.question, "%?");
+        keyValues.put(R.id.colon, ":%");
         keyValues.put(R.id.enter, "%enter");
 
         keyValues.put(R.id.delete, "%delete");

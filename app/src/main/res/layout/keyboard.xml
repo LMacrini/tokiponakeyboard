@@ -148,13 +148,13 @@
             android:textAllCaps="false" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/question"
+            android:id="@+id/colon"
             style="@style/ButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".1428"
             android:fontFamily="@font/nasin_nanpa"
-            android:text="@string/question"
+            android:text="@string/colon"
             android:textAllCaps="false" />
 
     </LinearLayout>
