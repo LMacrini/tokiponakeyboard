@@ -21,10 +21,10 @@ jobs:
       - name: Make Executable
         run: chmod +x gradlew
 
-      - name: Build with Gradle
+      - name: Build APK
         run: ./gradlew build
 
-      - name: Build with Gradle
+      - name: Assemble APK
         run: ./gradlew assemble
 
       - name: Print the dirs
