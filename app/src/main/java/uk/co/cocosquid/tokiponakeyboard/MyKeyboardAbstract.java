@@ -35,6 +35,7 @@ public abstract class MyKeyboardAbstract extends LinearLayout implements View.On
 
     // Arrays
     protected SparseArray<String> keyValues = new SparseArray<>();
+    protected String characters;
     protected String[] shortcuts;
     protected String[] words;
     protected String[] unofficialWords;

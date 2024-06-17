@@ -120,6 +120,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         Resources res = getResources();
         shortcuts = res.getStringArray(R.array.shortcuts);
         words = res.getStringArray(R.array.words);
+        characters = res.getString(R.string.characters);
         unofficialWords = res.getStringArray(R.array.unofficial_words);
     }
 
@@ -245,7 +246,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                     finishAction("finish");
                     switch (startKey) {
                         case "%[":
-                            write(",");
+                            write("󱦑");
                             break;
                         case "%「":
                             if (quoteNestingLevel > 0) {
@@ -315,53 +316,77 @@ public class MyKeyboard extends MyKeyboardAbstract {
         }
     }
 
+    protected boolean isWord(String target) {
+        for (String word : this.words) {
+            if (target.equals(word)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     protected void delete() {
         if (currentShortcut.isEmpty()) {
 
             // Delete some text
             updateTextInfo();
+            String tempString = "";
+            Log.d("Words: ", String.join(" ", this.words));
             label:
             for (int i = beforeCursorText.length() - 1; i >= 0; i--) {
-                String currentString = Character.toString(beforeCursorText.charAt(i));
-                switch (currentString) {
-                    case "\n":
-                    case "「":
-                        if (i == beforeCursorText.length() - 1) {
-                            inputConnection.deleteSurroundingText(1, 0);
-                        } else {
-                            inputConnection.deleteSurroundingText(beforeCursorText.length() - i - 1, 0);
-                        }
+                if (i == beforeCursorText.length() - 1) {
+                    String character = Character.toString(beforeCursorText.charAt(i));
+                    if (!this.characters.contains(character)) {
+                        inputConnection.deleteSurroundingText(1, 0);
                         break label;
-                    case " ":
-                    case "_":
-                    case ",":
-                    case "」":
-                    case ".":
-                    case ":":
-                    case "?":
-                    case "!":
-                        inputConnection.deleteSurroundingText(beforeCursorText.length() - i, 0);
-                        break label;
-                    case "]":
-
-                        // Move inside the brackets and delete from there
-                        inputConnection.setSelection(i, i);
-                        setBracket(true);
-                        delete();
-                        break label;
-
-                    case "[":
-
-                        // Delete everything from the opening bracket up to the closing bracket
-                        int endBracket = getEndBracketLocation();
-                        inputConnection.deleteSurroundingText(1, endBracket - beforeCursorText.length());
-                        //if (getNextCharacter().equals(" ")) {
-                        //    inputConnection.deleteSurroundingText(0, 1);
-                        //}
-                        setBracket(false);
-                        break label;
-                    //return;
+                    }
                 }
+                tempString = beforeCursorText.subSequence(i, beforeCursorText.length()).toString();
+                Log.d("String: ", tempString);
+                if (isWord(tempString)) {
+                    inputConnection.deleteSurroundingText(beforeCursorText.length() - i, 0);
+                    break label;
+                }
+                // String currentString = Character.toString(beforeCursorText.charAt(i));
+                // switch (currentString) {
+                //     case "\n":
+                //     case "「":
+                //         if (i == beforeCursorText.length() - 1) {
+                //             inputConnection.deleteSurroundingText(1, 0);
+                //         } else {
+                //             inputConnection.deleteSurroundingText(beforeCursorText.length() - i - 1, 0);
+                //         }
+                //         break label;
+                //     case " ":
+                //     case "_":
+                //     case ",":
+                //     case "」":
+                //     case ".":
+                //     case ":":
+                //     case "?":
+                //     case "!":
+                //         inputConnection.deleteSurroundingText(beforeCursorText.length() - i, 0);
+                //         break label;
+                //     case "]":
+
+                //         // Move inside the brackets and delete from there
+                //         inputConnection.setSelection(i, i);
+                //         setBracket(true);
+                //         delete();
+                //         break label;
+
+                //     case "[":
+
+                //         // Delete everything from the opening bracket up to the closing bracket
+                //         int endBracket = getEndBracketLocation();
+                //         inputConnection.deleteSurroundingText(1, endBracket - beforeCursorText.length());
+                //         //if (getNextCharacter().equals(" ")) {
+                //         //    inputConnection.deleteSurroundingText(0, 1);
+                //         //}
+                //         setBracket(false);
+                //         break label;
+                //     //return;
+                // }
                 if (i == 0) {
 
                     // Start of the input was reached
