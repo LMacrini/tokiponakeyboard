@@ -331,7 +331,6 @@ public class MyKeyboard extends MyKeyboardAbstract {
             // Delete some text
             updateTextInfo();
             String tempString = "";
-            Log.d("Words: ", String.join(" ", this.words));
             label:
             for (int i = beforeCursorText.length() - 1; i >= 0; i--) {
                 if (i == beforeCursorText.length() - 1) {
@@ -342,7 +341,6 @@ public class MyKeyboard extends MyKeyboardAbstract {
                     }
                 }
                 tempString = beforeCursorText.subSequence(i, beforeCursorText.length()).toString();
-                Log.d("String: ", tempString);
                 if (isWord(tempString)) {
                     inputConnection.deleteSurroundingText(beforeCursorText.length() - i, 0);
                     break label;
