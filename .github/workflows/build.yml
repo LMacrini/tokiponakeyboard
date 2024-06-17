@@ -25,7 +25,7 @@ jobs:
         run: ./gradlew buildRelease
 
       - name: Print the dirs
-        run: ls app/
+        run: ls app/build
 
       - name: Sign APK
         uses: r0adkll/sign-android-release@v1
