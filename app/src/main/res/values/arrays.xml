@@ -287,16 +287,16 @@
     </string-array>
 
     <string-array name="unofficial_words">
-        <item>apeja</item>
-        <item>kijetesantakalu</item>
-        <item>kin</item>
-        <item>kipisi</item>
-        <item>majuna</item>
-        <item>monsuta</item>
-        <item>namako</item>
-        <item>oko</item>
-        <item>pake</item>
-        <item>tonsi</item>
+        <item>󱦡</item>
+        <item>󱦀</item>
+        <item>󱥹</item>
+        <item>󱥻</item>
+        <item>󱦢</item>
+        <item>󱥽</item>
+        <item>󱥸</item>
+        <item>󱥺</item>
+        <item>󱦠</item>
+        <item>󱥾</item>
     </string-array>
 
     <!-- Setting arrays -->
