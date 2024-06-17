@@ -552,7 +552,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         }
 
         // Decide the correct word spacer to put before the word
-        String wordSpacer = " ";
+        String wordSpacer = "";
         if (cursorAtStart()) {
             wordSpacer = "";
         } else if (inBrackets) {
