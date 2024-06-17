@@ -162,7 +162,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                             writeShortcut("[%");
 
                             // Move cursor inside brackets
-                            moveCursorBack();
+                            // moveCursorBack();
 
                             setBracket(true);
                         }
