@@ -25,13 +25,13 @@ jobs:
         run: ./gradlew buildRelease
 
       - name: Print the dirs
-        run: ls app/build/generated/ap_generated_sources/release/out
+        run: ls app/build/outputs/apk/debug
 
       - name: Sign APK
         uses: r0adkll/sign-android-release@v1
         id: sign
         with:
-          releaseDirectory: app/build/outputs/apk/release
+          releaseDirectory: app/build/outputs/apk/debug
           signingKeyBase64: ${{ secrets.KEY }}
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.PASSWORD }}
