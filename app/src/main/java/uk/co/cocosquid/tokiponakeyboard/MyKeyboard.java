@@ -130,7 +130,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
             // Single key sent
             boolean nothingWritten = false;
             if (getPreviousCharacter().equals("「") && !getNextCharacter().isEmpty() && !getNextCharacter().equals("」") && !startKey.equals("%「") && !startKey.equals("%delete") && !startKey.equals("%enter")) {
-                suffix = " ";
+                suffix = "";
             }
             if (startKey.charAt(0) == '%') {
 
@@ -170,9 +170,9 @@ public class MyKeyboard extends MyKeyboardAbstract {
                     case "%「":
                         if (quoteNestingLevel > 0) {
                             write("」");
-                            if (!",.:?!\n".contains(getNextCharacter()) && !getNextCharacter().isEmpty()) {
-                                write(" ");
-                            }
+                            // if (!",.:?!\n".contains(getNextCharacter()) && !getNextCharacter().isEmpty()) {
+                            //     write(" ");
+                            // }
                         } else {
                             writeShortcut("「%");
                             if (getNextCharacter().equals(" ")) {
