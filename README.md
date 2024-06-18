@@ -32,7 +32,7 @@ Toki Pona Keyboard is an android application that adds an input method specifica
 
 ## How I made it
 
-This keyboard was built using the [standard android libraries](https://developer.android.com/). It types plain text and therefore it can be used anywhere to type in toki pona. The keys themselves also contain simple text but are styled into hieroglyphics with the [nasin nanpa 4.1](https://github.com/ETBCOR/nasin-nanpa) font.
+This keyboard was built using the [standard android libraries](https://developer.android.com/). It types plain text and therefore it can be used anywhere to type in toki pona. The keys are styled into hieroglyphics with the [nasin nanpa 4.1](https://github.com/ETBCOR/nasin-nanpa) font.
 <!-- This font is also active on some of the screenshots, but the way the words are rendered is completely dependent on the app that the text is on. -->
 
 
