@@ -10,6 +10,7 @@
         <item>ap</item>		<!-- apeja -->
         <item>aw</item>		<!-- awen -->
         <item>ee</item>		<!-- en -->
+        <item>ep</item>		<!-- epiku -->
         <item>es</item>		<!-- esun -->
         <item>ij</item>		<!-- ijo -->
         <item>ii</item>		<!-- ike -->
@@ -17,6 +18,7 @@
         <item>in</item>		<!-- insa -->
         <item>ja</item>		<!-- jaki -->
         <item>jj</item>		<!-- jan -->
+        <item>js</item>		<!-- jasima -->
         <item>je</item>		<!-- jelo -->
         <item>jo</item>		<!-- jo -->
         <item>ka</item>		<!-- kala -->
@@ -31,11 +33,14 @@
         <item>kip</item>	<!-- kipisi -->
         <item>kw</item>		<!-- kiwen -->
         <item>ko</item>		<!-- ko -->
+        <item>kk</item>		<!-- kokosila -->
         <item>kn</item>		<!-- kon -->
-        <item>ku</item>		<!-- kule -->
-        <item>kl</item>		<!-- kulupu -->
+        <item>ku</item>		<!-- ku -->
+        <item>kl</item>		<!-- kule -->
+        <item>kp</item>		<!-- kulupu -->
         <item>kt</item>		<!-- kute -->
         <item>ll</item>		<!-- la -->
+        <item>ln</item>		<!-- lanpan -->
         <item>la</item>		<!-- lape -->
         <item>ls</item>		<!-- laso -->
         <item>lw</item>		<!-- lawa -->
@@ -51,10 +56,12 @@
         <item>ln</item>		<!-- lukin -->
         <item>lp</item>		<!-- lupa -->
         <item>mm</item>		<!-- ma -->
-        <item>ma</item>		<!-- mama -->
-        <item>mi</item>		<!-- mani -->
-        <item>me</item>		<!-- meli -->
+        <item>maa</item>		<!-- mama -->
+        <item>man</item>		<!-- mani -->
+        <item>mee</item>		<!-- meli -->
+        <item>mes</item>		<!-- meso -->
         <item>mj</item>		<!-- mije -->
+        <item>mi</item>		<!-- misikeke -->
         <item>mk</item>		<!-- moku -->
         <item>ml</item>		<!-- moli -->
         <item>moo</item>	<!-- monsi -->
@@ -63,12 +70,13 @@
         <item>mn</item>		<!-- mun -->
         <item>ms</item>		<!-- musi -->
         <item>mt</item>		<!-- mute -->
-        <item>nm</item>		<!-- namako -->
+        <item>nn</item>		<!-- n -->
+        <item>nk</item>		<!-- namako -->
         <item>na</item>		<!-- nanpa -->
         <item>ns</item>		<!-- nasa -->
         <item>ni</item>		<!-- nasin -->
         <item>ne</item>		<!-- nena -->
-        <item>nn</item>		<!-- nimi -->
+        <item>nm</item>		<!-- nimi -->
         <item>no</item>		<!-- noka -->
         <item>oo</item>		<!-- o -->
         <item tools:ignore="Typos">ok</item>		<!-- oko -->
@@ -88,6 +96,7 @@
         <item>pip</item>	<!-- pipi -->
         <item>poo</item>	<!-- poka -->
         <item>pok</item>	<!-- poki -->
+        <item>pw</item>    	<!-- powe -->
         <item>pu</item>		<!-- pu -->
         <item>sa</item>		<!-- sama -->
         <item>sei</item>	<!-- seli -->
@@ -100,10 +109,11 @@
         <item>ss</item>		<!-- sina -->
         <item>sp</item>		<!-- sinpin -->
         <item>st</item>		<!-- sitelen -->
+        <item>so</item>		<!-- soko -->
         <item>sn</item>		<!-- sona -->
         <item>sw</item>		<!-- soweli -->
         <item>sl</item>		<!-- suli -->
-        <item>so</item>		<!-- suno -->
+        <item>sun</item>		<!-- suno -->
         <item>sup</item>	<!-- supa -->
         <item>suu</item>	<!-- suwi -->
         <item>ta</item>		<!-- tan -->
@@ -153,6 +163,7 @@
         <item>󱦡</item>
         <item>󱤈</item>
         <item>󱤊</item>
+        <item>󱦃</item>
         <item>󱤋</item>
         <item>󱤌</item>
         <item>󱤍</item>
@@ -160,6 +171,7 @@
         <item>󱤏</item>
         <item>󱤐</item>
         <item>󱤑</item>
+        <item>󱥿</item>
         <item>󱤒</item>
         <item>󱤓</item>
         <item>󱤔</item>
@@ -174,11 +186,14 @@
         <item>󱥻</item>
         <item>󱤛</item>
         <item>󱤜</item>
+        <item>󱦄</item>
         <item>󱤝</item>
+        <item>󱦈</item>
         <item>󱤞</item>
         <item>󱤟</item>
         <item>󱤠</item>
         <item>󱤡</item>
+        <item>󱦅</item>
         <item>󱤢</item>
         <item>󱤣</item>
         <item>󱤤</item>
@@ -197,7 +212,9 @@
         <item>󱤱</item>
         <item>󱤲</item>
         <item>󱤳</item>
+        <item>󱦂</item>
         <item>󱤵</item>
+        <item>󱦇</item>
         <item>󱤶</item>
         <item>󱤷</item>
         <item>󱤸</item>
@@ -206,6 +223,7 @@
         <item>󱤺</item>
         <item>󱤻</item>
         <item>󱤼</item>
+        <item>󱦆</item>
         <item>󱥸</item>
         <item>󱤽</item>
         <item>󱤾</item>
@@ -231,6 +249,7 @@
         <item>󱥑</item>
         <item>󱥒</item>
         <item>󱥓</item>
+        <item>󱦣</item>
         <item>󱥕</item>
         <item>󱥖</item>
         <item>󱥗</item>
@@ -243,6 +262,7 @@
         <item>󱥞</item>
         <item>󱥟</item>
         <item>󱥠</item>
+        <item>󱦁</item>
         <item>󱥡</item>
         <item>󱥢</item>
         <item>󱥣</item>
@@ -288,14 +308,23 @@
 
     <string-array name="unofficial_words">
         <item>󱦡</item>
+        <item>󱦃</item>
+        <item>󱥿</item>
         <item>󱦀</item>
         <item>󱥹</item>
         <item>󱥻</item>
+        <item>󱦄</item>
+        <item>󱦈</item>
         <item>󱦢</item>
+        <item>󱦂</item>
+        <item>󱦇</item>
         <item>󱥽</item>
+        <item>󱦆</item>
         <item>󱥸</item>
         <item>󱥺</item>
         <item>󱦠</item>
+        <item>󱦣</item>
+        <item>󱦁</item>
         <item>󱥾</item>
     </string-array>
 
