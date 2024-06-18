@@ -335,6 +335,13 @@ public class MyKeyboard extends MyKeyboardAbstract {
             String tempString = "";
             label:
             for (int i = beforeCursorText.length() - 1; i >= 0; i--) {
+                if (i > 0) {
+                    if ("󱦖".equals("" + beforeCursorText.charAt(i - 1) + beforeCursorText.charAt(i))) {
+                        inputConnection.deleteSurroundingText(beforeCursorText.length() - i + 1, 0);
+                        delete();
+                        break;
+                    }
+                }
                 if (i == beforeCursorText.length() - 1) {
                     String character = Character.toString(beforeCursorText.charAt(i));
                     if (!this.characters.contains(character)) {
