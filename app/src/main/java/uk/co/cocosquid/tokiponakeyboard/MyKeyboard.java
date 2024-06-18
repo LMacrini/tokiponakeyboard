@@ -261,9 +261,6 @@ public class MyKeyboard extends MyKeyboardAbstract {
                                 action(startKey, null);
                             }
                             break;
-                        case "%.":
-                            write(":");
-                            break;
                         case "%?":
                             write("!");
                             break;
