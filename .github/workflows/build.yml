@@ -36,8 +36,11 @@ jobs:
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.PASSWORD }}
 
+      - name: Rename File
+        run: mv ${{ steps.sign.outputs.signedReleaseFile }} ./toki-pona-keyboard.apk
+
       - name: Upload App
         uses: actions/upload-artifact@v4
         with:
           name: app
-          path: ${{ steps.sign.outputs.signedReleaseFile }}
+          path: ./toki-pona-keyboard.apk
