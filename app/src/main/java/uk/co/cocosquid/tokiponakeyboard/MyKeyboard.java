@@ -109,7 +109,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
         keyValues.put(R.id.toki, "toki%");
 
         keyValues.put(R.id.bracket, "%[");
-        keyValues.put(R.id.dot, "%.");
+        keyValues.put(R.id.dot, ".%");
         keyValues.put(R.id.quote, "%「");
         keyValues.put(R.id.colon, ":%");
         keyValues.put(R.id.enter, "%enter");
@@ -183,7 +183,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                             }
                         }
                         break;
-                    case "%.":
+                    case ".%":
                     case "%?":
                         write(Character.toString(startKey.charAt(1)));
                         //action(startKey.charAt(1) + "%", null);
@@ -261,7 +261,7 @@ public class MyKeyboard extends MyKeyboardAbstract {
                                 action(startKey, null);
                             }
                             break;
-                        case "%.":
+                        case ".%":
                         case ":%":
                         case "%?":
                             write("!");
