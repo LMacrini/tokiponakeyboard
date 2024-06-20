@@ -262,7 +262,11 @@ public class MyKeyboard extends MyKeyboardAbstract {
                             }
                             break;
                         case ".%":
+                            write("󱦕");
+                            break;
                         case ":%":
+                            write("󱦝");
+                            break;
                         case "%?":
                             write("!");
                             break;
